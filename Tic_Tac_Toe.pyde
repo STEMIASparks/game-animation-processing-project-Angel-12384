@@ -235,7 +235,7 @@ def mousePressed ():
         fill(0,51,51)
         textSize(14)
         text("winner! left column X",12,20)
-        game_over = True
+       
     elif top_left ==2 and middle_left ==2 and bottom_left == 2:  
         fill(0,51,51)
         textSize(14)
