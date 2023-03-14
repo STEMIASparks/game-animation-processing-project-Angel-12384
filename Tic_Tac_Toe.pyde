@@ -118,7 +118,7 @@ def mousePressed ():
     global bottom_right
     global turn
     
-    if (mouseX > 0 and mouseX < 200) and (mouseY > 0 and mouseY < 200 ):
+    if (mouseX > 0 and mouseX < 200) and (mouseY > 0 and mouseY < 200 ) and top_left == 0:
         top_left = turn
         
         # switch turns
@@ -127,7 +127,7 @@ def mousePressed ():
         elif turn ==2:
             turn = 1
         
-    elif(mouseX > 150 and mouseX < 330) and (mouseY > 0 and mouseY< 150):
+    elif(mouseX > 150 and mouseX < 330) and (mouseY > 0 and mouseY< 150) and top_middle == 0:
         top_middle = turn
         
          # switch turns
@@ -136,7 +136,7 @@ def mousePressed ():
         elif turn ==2:
             turn = 1
             
-    elif(mouseX > 330 and mouseX < 500) and (mouseY > 0 and mouseY < 150) :
+    elif(mouseX > 330 and mouseX < 500) and (mouseY > 0 and mouseY < 150) and top_right == 0:
         top_right = turn
         
           # switch turns
@@ -146,7 +146,7 @@ def mousePressed ():
             turn = 1
         
         
-    elif(mouseX > 0 and mouseX < 150) and (mouseY > 150 and mouseY < 340):
+    elif(mouseX > 0 and mouseX < 150) and (mouseY > 150 and mouseY < 340) and middle_left == 0:
         middle_left = turn
         
          # switch turns
@@ -155,7 +155,7 @@ def mousePressed ():
         elif turn ==2:
             turn = 1
             
-    elif(mouseX >150 and mouseX < 350) and (mouseY > 150 and mouseY< 350) :
+    elif(mouseX >150 and mouseX < 350) and (mouseY > 150 and mouseY< 350) and middle_middle == 0:
         middle_middle = turn
          
          # switch turns
@@ -164,7 +164,7 @@ def mousePressed ():
         elif turn ==2:
             turn = 1
         
-    elif(mouseX > 330 and mouseX < 500) and (mouseY > 150 and mouseY < 350):
+    elif(mouseX > 330 and mouseX < 500) and (mouseY > 150 and mouseY < 350) and middle_right == 0:
         middle_right = turn
         
          # switch turns
@@ -174,7 +174,7 @@ def mousePressed ():
             turn = 1
        
          
-    elif(mouseX > 0 and mouseX < 150) and (mouseY > 345 and mouseY < 500):
+    elif(mouseX > 0 and mouseX < 150) and (mouseY > 345 and mouseY < 500) and bottom_left == 0:
         bottom_left = turn 
        
          # switch turns
@@ -183,7 +183,7 @@ def mousePressed ():
         elif turn ==2:
             turn = 1
         
-    elif(mouseX > 150 and mouseX < 330) and (mouseY > 345 and mouseY< 500):
+    elif(mouseX > 150 and mouseX < 330) and (mouseY > 345 and mouseY< 500) and bottom_middle == 0:
         bottom_middle = turn
         
          # switch turns
@@ -192,7 +192,7 @@ def mousePressed ():
         elif turn ==2:
             turn = 1
        
-    elif(mouseX > 330 and mouseX < 500) and (mouseY > 330 and mouseY < 500):
+    elif(mouseX > 330 and mouseX < 500) and (mouseY > 330 and mouseY < 500) and bottom_right == 0:
         bottom_right = turn
         
          # switch turns
