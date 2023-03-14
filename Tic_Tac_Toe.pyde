@@ -11,6 +11,8 @@ bottom_right =0# 0-empty,1-X,2-O
 bottom_middle =0 # 0-empty,1-X,2-O
 
 turn = 1
+# manage if game is over
+game_over = False # False - game is on,True - game is over
 
 def setup ():
     size(500,500)
@@ -22,8 +24,8 @@ def draw ():
      stroke(0,0,400)
      line(150,0,150,500)
      line(330,0,330,500)
-     line(0,150,900,150)
-     line(0,350,900,350)
+     line(0,150,500,150)
+     line(0,350,500,350)
      # top left O
      if top_left == 2:
         fill(255,255,0)
@@ -97,6 +99,9 @@ def draw ():
      elif bottom_right ==1:
         line(500,500,345,345)
         line(345,500,500,345)
+
+
+    
         
 def mousePressed ():
     println([mouseX,mouseY])
@@ -197,27 +202,87 @@ def mousePressed ():
             turn = 1
     # check for winners
     if middle_left ==1 and middle_middle ==1 and middle_right==1:
-        print("winner! middle row 1")
+       fill(0,51,51)
+       textSize(14)
+       text("winner! middle row X",12,20)
+
     elif middle_left == 2 and middle_middle ==2 and middle_right==2:
-        print("winner! middle row 2")
+        fill(0,51,51)
+        textSize(14)
+        text("winner! middle row O",15,20)
+        
     if top_left == 1 and top_middle == 1 and top_right == 1:
-        print(" winner! top row 1")
+        fill(0,51,51)
+        textSize(14)
+        text(" winner! top row X",12,20)
+        
     elif top_left == 2 and top_middle == 2 and top_right == 2:
-        print(" winner! top row 2")
+        fill(0,51,51)
+        textSize(14)
+        text(" winner! top row O",12,20)
+       
     if  bottom_left ==1 and bottom_middle == 1 and bottom_right ==1:
-        print(" winner! bottom row 1")
+        fill(0,51,51)
+        textSize(14)
+        text(" winner! bottom row X",12,20)
+        game_over = True
     elif bottom_left == 2 and bottom_middle == 2 and bottom_right ==2:
-        print("winner! bottom row 2")
+        fill(0,51,51)
+        textSize(14)
+        text("winner! bottom row O",12,20)
+        
     if top_left ==1 and middle_left ==1 and bottom_left == 1:
-        print("winner! left column 1")
+        fill(0,51,51)
+        textSize(14)
+        text("winner! left column X",12,20)
+        game_over = True
     elif top_left ==2 and middle_left ==2 and bottom_left == 2:  
-        print("winner! left column 2")
+        fill(0,51,51)
+        textSize(14)
+        text("winner! left column O",12,20)
+        
     if  top_middle ==1 and middle_middle ==1 and bottom_middle == 1:
-        print("winner! middle column 1")
+        fill(0,51,51)
+        textSize(14)
+        text("winner! middle column X",12,20)
+        
     elif top_middle ==2 and middle_middle ==2 and bottom_middle ==2:
-        print("winner! right column 2")
+        fill(0,51,51)
+        textSize(14)
+        text("winner! right column O",12,20)
+        
     if top_right ==1 and middle_middle == 1 and bottom_left == 1:
-        print(" winner! diagonal towards the right 1")
+        fill(0,51,51)
+        textSize(14)
+        text(" winner! diagonal towards the right X",12,20)
+        
+    elif top_right ==2 and middle_middle ==2 and bottom_left ==2:
+        fill(0,51,51)
+        textSize(14)
+        text(" winner! diagonal towards the right O",12,20)
+        game_over = True
+    if top_right ==1 and middle_middle ==1 and bottom_left ==1:
+        fill(0,51,51)
+        textSize(14)
+        text(" winner! diagonal towards the left X",12,20)
+    elif top_right == 2 and middle_middle ==2 and bottom_left ==2:
+        fill(0,51,51)
+        textSize(14)
+        text(" winner! diagonal towards the left O",12,20)
+        
+    if top_left ==1 and middle_middle ==1 and bottom_right ==1:
+        fill(0,51,51)
+        textSize(14)
+        text(" winner! diagonal towards the left X",12,20)
+    
+    elif top_left == 2 and middle_middle ==2 and bottom_right ==2:
+        fill(0,51,51)
+        textSize(14)
+        text(" winner! diagonal towards the left O",12,20)
+
+        
+    
+    
     
     
     
